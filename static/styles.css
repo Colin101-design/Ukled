@@ -211,3 +211,80 @@ footer p {
     color: #2c3e50;
     margin-bottom: 30px;
 }
+/* Add this at the bottom of your existing styles.css */
+
+/* Styles for larger screens (desktops and tablets) */
+.about-section {
+    padding: 40px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image {
+    width: 100%;
+    height: auto;
+    max-height: 400px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+.about-content {
+    text-align: left;
+    line-height: 1.6;
+    color: #333;
+    font-size: 1.1em;
+    margin-top: 20px;
+}
+
+.about-content p {
+    margin-bottom: 20px;
+}
+
+.about-content h2 {
+    font-size: 2.5em;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Responsive adjustments for smaller screens (mobile) */
+@media (max-width: 768px) {
+    .about-section {
+        padding: 20px;
+    }
+
+    .about-content {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .about-content h2 {
+        font-size: 2em;
+    }
+
+    .about-image {
+        max-height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-section {
+        padding: 15px;
+    }
+
+    .about-content {
+        font-size: 0.9em;
+    }
+
+    .about-content h2 {
+        font-size: 1.8em;
+    }
+
+    .about-image {
+        max-height: 200px;
+    }
+}
