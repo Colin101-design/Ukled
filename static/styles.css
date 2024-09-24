@@ -288,3 +288,22 @@ footer p {
         max-height: 200px;
     }
 }
+.back-home {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.home-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+    background-color: #1a252f;
+}
