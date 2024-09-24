@@ -12,6 +12,12 @@ header {
     background-color: #333;
     color: white;
     padding: 1rem 0;
+    text-align: center;
+}
+
+header img.logo {
+    max-width: 150px;
+    margin-bottom: 10px;
 }
 
 header nav ul {
@@ -38,9 +44,10 @@ header nav ul li a:hover {
 
 /* Hero Section */
 .hero {
-    background: url('https://example.com/your-hero-image.jpg') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1586812351685-f3e9eacff597?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&q=80&w=1920') no-repeat center center/cover;
     height: 80vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -66,6 +73,7 @@ header nav ul li a:hover {
     border-radius: 5px;
     text-decoration: none;
     font-size: 1.2rem;
+    transition: background-color 0.3s ease;
 }
 
 .cta-button:hover {
@@ -85,6 +93,8 @@ header nav ul li a:hover {
 }
 
 .features ul {
+    display: flex;
+    justify-content: space-around;
     list-style: none;
     padding: 0;
 }
