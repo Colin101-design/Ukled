@@ -7,11 +7,13 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styles */
 header {
-    background-color: rgba(51, 51, 51, 0.8); /* Semi-transparent background for header */
-    color: white;
+    background-color: white; /* Set header background to white */
+    color: black;            /* Set text color to black */
     padding: 1rem 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
 }
 
 header img.logo {
@@ -32,13 +34,13 @@ header nav ul li {
 }
 
 header nav ul li a {
-    color: white;
+    color: black;            /* Change link color to black */
     text-decoration: none;
     font-size: 1.2rem;
 }
 
 header nav ul li a:hover {
-    color: #fca311;
+    color: #fca311;         /* Change color on hover */
 }
 
 /* Video Background */
