@@ -1,89 +1,110 @@
-/* General Body Styles */
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-/* Header Styles */
 header {
     background-color: #333;
     color: white;
-    text-align: center;
-    padding: 10px 0;
+    padding: 1rem 0;
 }
 
-/* Navigation Menu Styles */
-nav ul {
-    list-style-type: none;
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+header nav ul li {
+    margin: 0 20px;
 }
 
-nav ul li a {
+header nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 1.2rem;
 }
 
-/* Hero Section Styles */
-#hero {
-    background-color: #282c34;
-    color: white;
-    padding: 100px 20px;
+header nav ul li a:hover {
+    color: #fca311;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://example.com/your-hero-image.jpg') no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-}
-
-#hero h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-}
-
-#hero p {
-    font-size: 24px;
-}
-
-.cta {
-    background-color: #28a745;
     color: white;
-    padding: 15px 30px;
-    text-decoration: none;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fca311;
+    color: white;
     border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
-.cta:hover {
-    background-color: #218838;
+.cta-button:hover {
+    background-color: #e59800;
 }
 
-/* About Section Styles */
-#about {
-    padding: 100px 20px;
+/* Features Section */
+.features {
+    padding: 3rem 1rem;
     text-align: center;
-    background-color: white;
 }
 
-#about h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
 }
 
-#about p {
-    font-size: 18px;
-    color: #555;
+.features ul {
+    list-style: none;
+    padding: 0;
 }
 
-/* Footer Styles */
+.features ul li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #666;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
 }
