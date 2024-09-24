@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="UKLED Logo" class="logo">
         <nav>
             <ul>
                 <li><a href="{{ url_for('homepage') }}">Home</a></li>
@@ -28,9 +29,9 @@
         <section class="features">
             <h2>Why Choose UKLED?</h2>
             <ul>
-                <li>Energy-Efficient LED Solutions</li>
-                <li>Custom Designs for Every Space</li>
-                <li>Quality You Can Trust</li>
+                <li><i class="fas fa-lightbulb"></i> Energy-Efficient LED Solutions</li>
+                <li><i class="fas fa-tools"></i> Custom Designs for Every Space</li>
+                <li><i class="fas fa-check-circle"></i> Quality You Can Trust</li>
             </ul>
         </section>
     </main>
@@ -38,5 +39,7 @@
     <footer>
         <p>&copy; 2024 UKLED - All Rights Reserved</p>
     </footer>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
 </body>
 </html>
