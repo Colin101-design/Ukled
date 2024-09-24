@@ -3,23 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UKLED - About Us</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <title>About Us - UKLED</title>
 </head>
 <body>
     <header>
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="UKLED Logo" class="logo">
         <nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About Us</a></li>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('products') }}">Products</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section id="about">
-            <h1>About UKLED</h1>
-            <p>We provide energy-efficient LED lighting solutions for businesses and homes across the UK.</p>
+        <section class="about">
+            <h1>About Us</h1>
+            <img src="{{ url_for('static', filename='warehouse.jpg') }}" alt="Manufacturing Warehouse" class="about-image">
+            <p>Welcome to UKLED, a leading manufacturer of innovative lighting solutions. Since our establishment in 2012, we have been committed to providing high-quality LED products tailored to meet the needs of our diverse clientele. Our extensive experience in the industry has allowed us to partner with major brands, including Pizza Express and Laura Ashley, delivering exceptional lighting solutions that enhance their spaces.</p>
+            <p>At UKLED, we take pride in our state-of-the-art manufacturing facility, which is equipped with cutting-edge technology. This enables us to produce reliable and energy-efficient lighting products that comply with the highest industry standards. Our dedicated team of engineers and designers works tirelessly to create innovative solutions that not only illuminate but also inspire.</p>
+            <p>Throughout our journey, we have maintained a strong focus on sustainability. Our products are designed to reduce energy consumption, contributing to a greener environment. We believe that lighting should not only be functional but also beautiful and environmentally friendly.</p>
+            <p>We have successfully completed numerous projects across various sectors, including hospitality, retail, and commercial spaces. Our commitment to quality and customer satisfaction has earned us a reputation as a trusted partner in the lighting industry.</p>
+            <p>As we continue to grow, we remain dedicated to our core values: integrity, innovation, and excellence. We look forward to lighting up your world with our exceptional products and services.</p>
         </section>
     </main>
 
