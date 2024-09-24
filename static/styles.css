@@ -1,94 +1,177 @@
-/* styles.css */
-
-/* Basic Reset */
-* {
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Body */
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
     color: #333;
-    background: url('../static/your-video-file.mp4') no-repeat center center fixed; /* Update with your video path */
-    background-size: cover; /* Ensure it covers the entire background */
+    line-height: 1.6;
 }
 
-/* Header */
+/* Header Styles */
 header {
-    background-color: white; /* White background for the header */
-    padding: 10px 20px;
+    background-color: white; /* Set header background to white */
+    color: black;            /* Set text color to black */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
+}
+
+header img.logo {
+    max-width: 150px; /* Adjust the size of the logo */
+    margin-bottom: 10px;
+}
+
+header nav ul {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative; /* Relative positioning */
-    z-index: 10; /* Make sure it appears above the video */
-}
-
-.logo {
-    max-width: 150px; /* Adjust the logo size */
-}
-
-/* Navigation */
-nav ul {
+    justify-content: center;
     list-style: none;
-    display: flex;
+    margin: 0;
+    padding: 0;
 }
 
-nav ul li {
-    margin-left: 20px; /* Space between menu items */
+header nav ul li {
+    margin: 0 20px;
 }
 
-nav ul li a {
+header nav ul li a {
+    color: black;            /* Change link color to black */
     text-decoration: none;
-    color: black; /* Black text for navigation */
-    font-weight: bold;
+    font-size: 1.2rem;
 }
 
-/* Main Content */
-main {
+header nav ul li a:hover {
+    color: #fca311;         /* Change color on hover */
+}
+
+/* Video Background */
+.video-background {
+    position: relative;
+    height: 100vh; /* Full height */
+    overflow: hidden; /* Hide overflow */
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 51, 0, 0.6); /* Dark green overlay for readability */
+    z-index: 2; /* Make sure the overlay is above the video */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    color: white;
     padding: 20px;
 }
 
-/* About Section */
-.about {
-    margin-top: 20px;
+.hero h1 {
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
-.about-image {
-    width: 100%; /* Responsive width */
-    max-width: 800px; /* Max width for larger screens */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 8px; /* Rounded corners */
-    display: block; /* Center image */
-    margin: 20px auto; /* Center the image */
+.hero p {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fca311;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e59800;
+}
+
+/* Features Section */
+.features {
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fca311; /* Change feature heading color */
+}
+
+.features ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #eee; /* Light color for feature items */
 }
 
 /* Footer */
 footer {
+    background-color: rgba(51, 51, 51, 0.8);
+    color: white;
     text-align: center;
-    padding: 10px 0;
-    background-color: white; /* White background for footer */
-    color: black; /* Black text for footer */
-    margin-top: 20px;
-    position: relative; /* Relative positioning */
-    z-index: 10; /* Ensure it appears above the video */
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    header {
-        background-color: white; /* White background for mobile header */
+    .hero h1 {
+        font-size: 2.5rem; /* Adjust font size for smaller screens */
     }
-    nav ul {
-        flex-direction: column; /* Stack navigation items on small screens */
+
+    .hero p {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
     }
-    nav ul li {
-        margin: 10px 0; /* Space between stacked items */
+
+    .cta-button {
+        font-size: 1rem; /* Adjust button size for smaller screens */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
     }
-    .about-image {
-        max-width: 100%; /* Full width for small screens */
+
+    .features h2 {
+        font-size: 2rem; /* Adjust feature heading size */
+    }
+
+    .features ul {
+        flex-direction: column; /* Stack feature items vertically */
+    }
+
+    .features ul li {
+        margin: 10px 0; /* Add margin between items */
     }
 }
