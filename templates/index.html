@@ -19,22 +19,30 @@
         </nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <h1>Welcome to UKLED</h1>
-            <p>Your leading provider of energy-efficient LED lighting solutions.</p>
-            <a href="/products" class="cta-button">Explore Our Products</a>
-        </section>
+    <div class="video-background">
+        <video autoplay muted loop>
+            <source src="{{ url_for('static', filename='led_background.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay">
+            <main>
+                <section class="hero">
+                    <h1>Welcome to UKLED</h1>
+                    <p>Your leading provider of energy-efficient LED lighting solutions.</p>
+                    <a href="/products" class="cta-button">Explore Our Products</a>
+                </section>
 
-        <section class="features">
-            <h2>Why Choose UKLED?</h2>
-            <ul>
-                <li><i class="fas fa-lightbulb"></i> Energy-Efficient LED Solutions</li>
-                <li><i class="fas fa-tools"></i> Custom Designs for Every Space</li>
-                <li><i class="fas fa-check-circle"></i> Quality You Can Trust</li>
-            </ul>
-        </section>
-    </main>
+                <section class="features">
+                    <h2>Why Choose UKLED?</h2>
+                    <ul>
+                        <li><i class="fas fa-lightbulb"></i> Energy-Efficient LED Solutions</li>
+                        <li><i class="fas fa-tools"></i> Custom Designs for Every Space</li>
+                        <li><i class="fas fa-check-circle"></i> Quality You Can Trust</li>
+                    </ul>
+                </section>
+            </main>
+        </div>
+    </div>
 
     <footer>
         <p>&copy; 2024 UKLED - All Rights Reserved</p>
