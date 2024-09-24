@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UKLED - Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('homepage') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="/products">Products</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Welcome to UKLED</h1>
+            <p>Your leading provider of energy-efficient LED lighting solutions.</p>
+            <a href="/products" class="cta-button">Explore Our Products</a>
+        </section>
+
+        <section class="features">
+            <h2>Why Choose UKLED?</h2>
+            <ul>
+                <li>Energy-Efficient LED Solutions</li>
+                <li>Custom Designs for Every Space</li>
+                <li>Quality You Can Trust</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 UKLED - All Rights Reserved</p>
+    </footer>
+</body>
+</html>
