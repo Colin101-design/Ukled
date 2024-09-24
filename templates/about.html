@@ -1,33 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - UKLED</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
-<body class="about-page">
-    <header>
-        <img src="{{ url_for('static', filename='logo.png') }}" alt="UKLED Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section class="about">
-            <h1>About Us</h1>
-            <img src="{{ url_for('static', filename='warehouse.jpg') }}" alt="Warehouse" class="about-image">
-            <p>We are a large lighting manufacturer established in 2012, specializing in high-quality LED lighting solutions. Our clients have included well-known brands such as Pizza Express and Laura Ashley before their demise.</p>
-            <p>With a commitment to innovation and sustainability, we continue to provide exceptional products and services to our customers.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 UKLED. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+<section class="about-section">
+    <div class="about-container">
+        <h2>About Us</h2>
+        <img src="{{ url_for('static', filename='warehouse.jpg') }}" alt="Our Manufacturing Facility" class="about-image">
+        <div class="about-content">
+            <p>
+                Established in 2012, UKLED has become one of the leading manufacturers of high-quality LED lighting solutions. 
+                Our state-of-the-art manufacturing facility enables us to produce an extensive range of LED products, including 
+                bulbs, panels, and strip lights, all designed to meet the diverse needs of our customers.
+            </p>
+            <p>
+                Over the years, we have partnered with various large-scale clients such as <strong>Pizza Express</strong> 
+                and <strong>Laura Ashley</strong>, providing energy-efficient lighting solutions for commercial spaces, 
+                restaurants, and retail outlets. Even though some of our earlier clients have moved on, our commitment to 
+                innovation and excellence remains stronger than ever.
+            </p>
+            <p>
+                Our focus is not just on manufacturing but also on research and development. With a dedicated team of engineers 
+                and technicians, we continuously improve our products, ensuring they are energy-efficient, long-lasting, 
+                and environmentally friendly. From product design to final assembly, we maintain strict quality control 
+                standards to ensure each LED light meets global certification requirements.
+            </p>
+            <p>
+                At UKLED, sustainability is a core value. We aim to reduce our carbon footprint by using eco-friendly materials 
+                and processes. Our LED lights are built to last, reducing waste and energy consumption while providing superior 
+                illumination. Whether you need customized lighting for large-scale projects or standard products for everyday 
+                use, UKLED is your trusted partner.
+            </p>
+            <p>
+                Our journey in LED technology is fueled by a passion for lighting innovation, ensuring that we continue to lead 
+                the industry with cutting-edge products and unmatched customer service. We look forward to illuminating 
+                your future!
+            </p>
+        </div>
+    </div>
+</section>
