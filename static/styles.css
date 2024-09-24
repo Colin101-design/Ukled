@@ -1,177 +1,83 @@
-/* General Styles */
+/* styles.css */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: #333;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
+    color: #333;
+    background-color: #fff; /* Change background color as needed */
 }
 
-/* Header Styles */
+/* Header */
 header {
-    background-color: white; /* Set header background to white */
-    color: black;            /* Set text color to black */
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a subtle shadow for better separation */
-}
-
-header img.logo {
-    max-width: 150px; /* Adjust the size of the logo */
-    margin-bottom: 10px;
-}
-
-header nav ul {
+    background-color: white; /* White background for the header */
+    padding: 10px 20px;
     display: flex;
-    justify-content: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-header nav ul li {
-    margin: 0 20px;
-}
-
-header nav ul li a {
-    color: black;            /* Change link color to black */
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-header nav ul li a:hover {
-    color: #fca311;         /* Change color on hover */
-}
-
-/* Video Background */
-.video-background {
-    position: relative;
-    height: 100vh; /* Full height */
-    overflow: hidden; /* Hide overflow */
-}
-
-.video-background video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 51, 0, 0.6); /* Dark green overlay for readability */
-    z-index: 2; /* Make sure the overlay is above the video */
-    display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
+    justify-content: space-between;
 }
 
-/* Hero Section */
-.hero {
-    color: white;
+.logo {
+    max-width: 150px; /* Adjust the logo size */
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px; /* Space between menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black; /* Black text for navigation */
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
     padding: 20px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-.hero p {
-    font-size: 1.5rem;
-    margin-top: 1rem;
-}
-
-.cta-button {
-    display: inline-block;
+/* About Section */
+.about {
     margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #fca311;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.2rem;
-    transition: background-color 0.3s ease;
 }
 
-.cta-button:hover {
-    background-color: #e59800;
-}
-
-/* Features Section */
-.features {
-    padding: 3rem 1rem;
-    text-align: center;
-}
-
-.features h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-    color: #fca311; /* Change feature heading color */
-}
-
-.features ul {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    padding: 0;
-}
-
-.features ul li {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    color: #eee; /* Light color for feature items */
+.about-image {
+    width: 100%; /* Responsive width */
+    max-width: 800px; /* Max width for larger screens */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners */
 }
 
 /* Footer */
 footer {
-    background-color: rgba(51, 51, 51, 0.8);
-    color: white;
     text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-footer p {
-    margin: 0;
-    font-size: 1rem;
+    padding: 10px 0;
+    background-color: #f1f1f1; /* Light background for footer */
+    margin-top: 20px;
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
-    .hero h1 {
-        font-size: 2.5rem; /* Adjust font size for smaller screens */
+    nav ul {
+        flex-direction: column; /* Stack navigation items on small screens */
     }
-
-    .hero p {
-        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    nav ul li {
+        margin: 10px 0; /* Space between stacked items */
     }
-
-    .cta-button {
-        font-size: 1rem; /* Adjust button size for smaller screens */
-        padding: 8px 16px; /* Adjust padding for smaller screens */
-    }
-
-    .features h2 {
-        font-size: 2rem; /* Adjust feature heading size */
-    }
-
-    .features ul {
-        flex-direction: column; /* Stack feature items vertically */
-    }
-
-    .features ul li {
-        margin: 10px 0; /* Add margin between items */
+    .about-image {
+        max-width: 100%; /* Full width for small screens */
     }
 }
