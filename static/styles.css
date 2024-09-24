@@ -12,7 +12,8 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
-    background-color: #fff; /* Change background color as needed */
+    background: url('../static/your-video-file.mp4') no-repeat center center fixed; /* Update with your video path */
+    background-size: cover; /* Ensure it covers the entire background */
 }
 
 /* Header */
@@ -22,6 +23,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative; /* Relative positioning */
+    z-index: 10; /* Make sure it appears above the video */
 }
 
 .logo {
@@ -59,18 +62,26 @@ main {
     max-width: 800px; /* Max width for larger screens */
     height: auto; /* Maintain aspect ratio */
     border-radius: 8px; /* Rounded corners */
+    display: block; /* Center image */
+    margin: 20px auto; /* Center the image */
 }
 
 /* Footer */
 footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #f1f1f1; /* Light background for footer */
+    background-color: white; /* White background for footer */
+    color: black; /* Black text for footer */
     margin-top: 20px;
+    position: relative; /* Relative positioning */
+    z-index: 10; /* Ensure it appears above the video */
 }
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
+    header {
+        background-color: white; /* White background for mobile header */
+    }
     nav ul {
         flex-direction: column; /* Stack navigation items on small screens */
     }
