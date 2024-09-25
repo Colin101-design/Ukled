@@ -29,7 +29,7 @@ header img.logo {
     cursor: pointer;
 }
 
-/* Side Navigation Menu */
+/* Side Navigation Menu (Initially Hidden) */
 .side-nav {
     height: 100%;
     width: 0;
@@ -103,7 +103,6 @@ header img.logo {
 .hero {
     color: white;
     padding: 20px;
-    text-align: center;
 }
 
 .hero h1 {
@@ -132,6 +131,32 @@ header img.logo {
     background-color: #e59800;
 }
 
+/* Features Section */
+.features {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #ffffff; /* Correct background to white */
+}
+
+.features h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fca311;
+}
+
+.features ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+}
+
+.features ul li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: #333; /* Set text color back to black */
+}
+
 /* Footer */
 footer {
     background-color: rgba(51, 51, 51, 0.8);
@@ -141,7 +166,7 @@ footer {
     margin-top: 2rem;
 }
 
-/* Media Queries for Responsiveness */
+/* Media Queries */
 @media (max-width: 768px) {
     .hero h1 {
         font-size: 2.5rem;
@@ -154,5 +179,17 @@ footer {
     .cta-button {
         font-size: 1rem;
         padding: 8px 16px;
+    }
+
+    .features h2 {
+        font-size: 2rem;
+    }
+
+    .features ul {
+        flex-direction: column;
+    }
+
+    .features ul li {
+        margin: 10px 0;
     }
 }
