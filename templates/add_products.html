@@ -7,23 +7,81 @@
 </head>
 <body>
     <h1>Add a New Product</h1>
-    <form method="POST" action="/add_products">
+    <form method="POST" action="/add_products" enctype="multipart/form-data">
         <label for="name">Product Name:</label>
         <input type="text" id="name" name="name" required><br><br>
 
-        <label for="picture">Picture URL:</label>
-        <input type="text" id="picture" name="picture" required><br><br>
+        <label for="picture">Upload Picture:</label>
+        <input type="file" id="picture" name="picture" required><br><br>
 
         <label for="category">Category:</label>
         <input type="text" id="category" name="category" required><br><br>
 
         <label for="led_type">LED Type:</label>
-        <input type="text" id="led_type" name="led_type"><br><br>
+        <input type="text" id="led_type" name="led_type" required><br><br>
 
         <label for="warranty">Warranty:</label>
-        <input type="text" id="warranty" name="warranty"><br><br>
+        <input type="text" id="warranty" name="warranty" required><br><br>
 
-        <!-- Add other fields as necessary... -->
+        <label for="part_l_compliant">Part L Compliant:</label>
+        <input type="checkbox" id="part_l_compliant" name="part_l_compliant"><br><br>
+
+        <label for="dimensions">Dimensions:</label>
+        <input type="text" id="dimensions" name="dimensions" required><br><br>
+
+        <label for="weight">Weight:</label>
+        <input type="text" id="weight" name="weight" required><br><br>
+
+        <label for="windage">Windage:</label>
+        <input type="text" id="windage" name="windage" required><br><br>
+
+        <label for="equivalent_to">Equivalent to:</label>
+        <input type="text" id="equivalent_to" name="equivalent_to" required><br><br>
+
+        <label for="power_consumption">Power Consumption:</label>
+        <input type="text" id="power_consumption" name="power_consumption" required><br><br>
+
+        <label for="input_voltage">Input Voltage:</label>
+        <input type="text" id="input_voltage" name="input_voltage" required><br><br>
+
+        <label for="power_factor">Power Factor:</label>
+        <input type="text" id="power_factor" name="power_factor" required><br><br>
+
+        <label for="operating_temperature">Operating Temperature:</label>
+        <input type="text" id="operating_temperature" name="operating_temperature" required><br><br>
+
+        <label for="l70_rated_lifetime">L70 Rated Lifetime:</label>
+        <input type="text" id="l70_rated_lifetime" name="l70_rated_lifetime" required><br><br>
+
+        <label for="ingress_protection">Ingress Protection:</label>
+        <input type="text" id="ingress_protection" name="ingress_protection" required><br><br>
+
+        <label for="luminous_efficiency">Luminous Efficiency:</label>
+        <input type="text" id="luminous_efficiency" name="luminous_efficiency" required><br><br>
+
+        <label for="beam_angle">Beam Angle:</label>
+        <input type="text" id="beam_angle" name="beam_angle" required><br><br>
+
+        <label for="cri">CRI (Colour Rendering Index):</label>
+        <input type="text" id="cri" name="cri" required><br><br>
+
+        <label for="lumen_output">Lumen Output:</label>
+        <input type="text" id="lumen_output" name="lumen_output" required><br><br>
+
+        <label for="colour_temperature">Colour Temperature:</label>
+        <input type="text" id="colour_temperature" name="colour_temperature" required><br><br>
+
+        <label for="emergency_version">3-Hour Emergency Version:</label>
+        <input type="checkbox" id="emergency_version" name="emergency_version"><br><br>
+
+        <label for="occupancy_detector">Built-in Microwave Occupancy Detector:</label>
+        <input type="checkbox" id="occupancy_detector" name="occupancy_detector"><br><br>
+
+        <label for="dimmable_1_10v">1-10V Dimmable:</label>
+        <input type="checkbox" id="dimmable_1_10v" name="dimmable_1_10v"><br><br>
+
+        <label for="dimmable_dali">DALI Dimmable:</label>
+        <input type="checkbox" id="dimmable_dali" name="dimmable_dali"><br><br>
 
         <input type="submit" value="Add Product">
     </form>
