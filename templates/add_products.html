@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+</head>
+<body>
+    <h1>Add a New Product</h1>
+    <form method="POST" action="/add_products">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="picture">Picture URL:</label>
+        <input type="text" id="picture" name="picture" required><br><br>
+
+        <label for="category">Category:</label>
+        <input type="text" id="category" name="category" required><br><br>
+
+        <label for="led_type">LED Type:</label>
+        <input type="text" id="led_type" name="led_type"><br><br>
+
+        <label for="warranty">Warranty:</label>
+        <input type="text" id="warranty" name="warranty"><br><br>
+
+        <!-- Add other fields as necessary... -->
+
+        <input type="submit" value="Add Product">
+    </form>
+</body>
+</html>
