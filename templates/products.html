@@ -1,1 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Our Products</h1>
+<div class="product-grid">
+    {% for product in products %}
+    <div class="product-card" style="position: relative; overflow: hidden;">
+        <img src="{{ product.picture }}" alt="{{ product.name }}" class="product-image" style="width: 100%; height: auto;">
+        <div class="overlay" style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.7); color: white; display: flex; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s;">
+            <div>{{ product.name }}</div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<style>
+.product-card:hover .overlay {
+    opacity: 1;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+</style>
+{% endblock %}
 
