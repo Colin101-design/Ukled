@@ -21,6 +21,7 @@ header img.logo {
     max-width: 150px;
 }
 
+/* Hamburger Menu Icon */
 .menu-icon {
     font-size: 2rem;
     position: absolute;
@@ -32,11 +33,11 @@ header img.logo {
 /* Side Navigation Menu (Initially Hidden) */
 .side-nav {
     height: 100%;
-    width: 0;
+    width: 0; /* Initially hidden */
     position: fixed;
     top: 0;
     right: 0;
-    background-color: rgba(0, 51, 0, 0.9);
+    background-color: rgba(0, 51, 0, 0.9); /* Dark background color */
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -53,7 +54,7 @@ header img.logo {
 }
 
 .side-nav a:hover {
-    background-color: #fca311;
+    background-color: #fca311; /* Change color on hover */
 }
 
 .side-nav .close-btn {
@@ -63,6 +64,67 @@ header img.logo {
     font-size: 2rem;
     color: white;
     cursor: pointer;
+}
+
+/* About Us Section */
+.about-section {
+    padding: 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.about-container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #fca311;
+}
+
+.about-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    transition: transform 0.3s ease;
+    display: block;
+    margin: 0 auto;
+}
+
+.about-content {
+    margin-top: 1.5rem;
+    text-align: center;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.back-home {
+    margin-top: 2rem;
+}
+
+.back-home a {
+    padding: 10px 20px;
+    background-color: #fca311;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.back-home a:hover {
+    background-color: #e59800;
+}
+
+/* Hover effect for About Us image */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Video Background */
@@ -135,13 +197,13 @@ header img.logo {
 .features {
     padding: 3rem 1rem;
     text-align: center;
-    background-color: #ffffff; /* Correct background to white */
+    color: white; /* Make text white */
 }
 
 .features h2 {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
-    color: #fca311;
+    color: white; /* Ensure white color for the heading */
 }
 
 .features ul {
@@ -154,7 +216,7 @@ header img.logo {
 .features ul li {
     font-size: 1.2rem;
     margin-bottom: 1rem;
-    color: #333; /* Set text color back to black */
+    color: white; /* Ensure white color for the list items */
 }
 
 /* Footer */
