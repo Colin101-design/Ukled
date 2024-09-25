@@ -66,61 +66,6 @@ header img.logo {
     cursor: pointer;
 }
 
-/* About Section */
-.about-section {
-    padding: 40px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-.about-container {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-}
-
-.about-image {
-    width: 100%;
-    height: auto;
-    max-width: 800px;
-    max-height: 400px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-}
-
-.about-image-container:hover .about-image {
-    transform: scale(1.1); /* Zoom effect on hover */
-}
-
-.about-content {
-    text-align: center;
-    line-height: 1.6;
-    color: #333;
-    font-size: 1.1em;
-    margin-top: 20px;
-}
-
-.about-content p {
-    margin-bottom: 20px;
-}
-
-.about-content h2 {
-    font-size: 2.5em;
-    color: #2c3e50;
-    margin-bottom: 30px;
-}
-
-.back-home {
-    margin-top: 30px;
-}
-
 /* Video Background */
 .video-background {
     position: relative;
@@ -246,11 +191,5 @@ footer {
 
     .features ul li {
         margin: 10px 0;
-    }
-
-    /* About Section Responsiveness */
-    .about-image {
-        max-width: 100%;
-        max-height: 300px;
     }
 }
