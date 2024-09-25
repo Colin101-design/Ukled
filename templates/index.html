@@ -9,13 +9,19 @@
 <body>
     <header>
         <img src="{{ url_for('static', filename='logo.png') }}" alt="UKLED Logo" class="logo">
-        <nav>
-            <ul>
-                <li><a href="{{ url_for('homepage') }}">Home</a></li>
-                <li><a href="{{ url_for('about') }}">About</a></li>
-                <li><a href="/products">Products</a></li>
-                <li><a href="/contact">Contact</a></li>
-            </ul>
+        
+        <!-- Hamburger Menu Icon -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- This is the hamburger icon (three lines) -->
+        </div>
+
+        <!-- Pop-up Navigation Menu -->
+        <nav id="side-menu" class="side-nav">
+            <a href="javascript:void(0)" class="close-btn" onclick="toggleMenu()">&times;</a>
+            <a href="{{ url_for('homepage') }}">Home</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="/products">Products</a>
+            <a href="/contact">Contact</a>
         </nav>
     </header>
 
@@ -47,7 +53,17 @@
     <footer>
         <p>&copy; 2024 UKLED - All Rights Reserved</p>
     </footer>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("side-menu");
+            if (menu.style.width === "250px") {
+                menu.style.width = "0";
+            } else {
+                menu.style.width = "250px";
+            }
+        }
+    </script>
 </body>
 </html>
