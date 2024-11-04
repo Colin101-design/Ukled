@@ -18,10 +18,10 @@ db.init_app(app)
 with app.app_context():
     db.create_all()
 
-# Home Page
+# Temporary Holding Page Route
 @app.route('/')
-def homepage():
-    return render_template('index.html')
+def holding_page():
+    return render_template('holding_page.html')
 
 # About Us Page
 @app.route('/about')
@@ -33,7 +33,7 @@ def about():
 def add_products():
     if request.method == 'POST':
         try:
-            # Get form data, some fields can be left empty (handled as optional)
+            # Get form data, with optional fields
             name = request.form.get('name')
             category = request.form.get('category', None)
             led_type = request.form.get('led_type', None)
@@ -59,15 +59,16 @@ def add_products():
             dimmable_1_10v = request.form.get('dimmable_1_10v') == 'on'
             dimmable_dali = request.form.get('dimmable_dali') == 'on'
 
-            # Handle the file upload for the picture
+            # Handle file upload for picture
             file = request.files.get('picture', None)
             if file and file.filename != '':
                 filename = secure_filename(file.filename)
+                os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)  # Ensure upload folder exists
                 file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
             else:
                 filename = None  # No file was uploaded
 
-            # Create a new product instance with optional fields
+            # Create a new product instance
             new_product = Product(
                 name=name,
                 picture=filename,
@@ -96,7 +97,7 @@ def add_products():
                 dimmable_dali=dimmable_dali
             )
 
-            # Add to the database
+            # Add product to the database
             db.session.add(new_product)
             db.session.commit()
 
@@ -104,7 +105,7 @@ def add_products():
             return redirect(url_for('products'))
         
         except Exception as e:
-            # Log the error and flash an error message
+            # Log error and flash message
             print(f"Error adding product: {e}")
             flash('There was an error adding the product. Please try again.', 'danger')
 
