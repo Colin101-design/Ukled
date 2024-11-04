@@ -40,10 +40,15 @@
             background: rgba(0, 51, 0, 0.6);
             z-index: 2;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
+        }
+        .overlay img {
+            max-width: 150px;
+            margin-bottom: 20px;
         }
         .overlay h1 {
             font-size: 3rem;
@@ -62,10 +67,9 @@
             <!-- Provide a fallback if video doesn't load -->
         </video>
         <div class="overlay">
-            <div>
-                <h1>Our Website is Coming Soon</h1>
-                <p>We're working hard to bring you a new experience. Stay tuned!</p>
-            </div>
+            <img src="static/logo.png" alt="UKLED Logo">
+            <h1>Our Website is Coming Soon</h1>
+            <p>We're working hard to bring you a new experience. Stay tuned!</p>
         </div>
     </div>
 </body>
