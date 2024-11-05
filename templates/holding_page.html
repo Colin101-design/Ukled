@@ -53,15 +53,26 @@
             font-size: 1.5rem;
             margin: 10px 0 0;
         }
-        /* Logo Positioning */
-        .logo-container {
+        .center-logo {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+        }
+        .bottom-left-logo {
             position: absolute;
             bottom: 20px;
             left: 20px;
             z-index: 3;
         }
-        .logo-container img {
+        .center-logo img {
             width: 150px; /* Adjust size as needed */
+            height: auto;
+        }
+        .bottom-left-logo img {
+            width: 100px; /* Adjust size as needed */
+            height: auto;
         }
     </style>
 </head>
@@ -71,15 +82,19 @@
             <source src="static/led_background.mp4" type="video/mp4">
             <!-- Provide a fallback if video doesn't load -->
         </video>
+        <!-- Centered UKLED Logo -->
+        <div class="center-logo">
+            <img src="static/logo.png" alt="UKLED Logo">
+        </div>
+        <!-- Bottom-left TDD Group Ltd Logo -->
+        <div class="bottom-left-logo">
+            <img src="static/tdd_group_ltd_logo.jpg" alt="TDD Group Ltd Logo">
+        </div>
         <div class="overlay">
             <div>
                 <h1>Our Website is Coming Soon</h1>
                 <p>We're working hard to bring you a new experience. Stay tuned!</p>
             </div>
-        </div>
-        <!-- Logo in bottom-left corner -->
-        <div class="logo-container">
-            <img src="static/TDD_Group_Ltd_Logo.jpeg" alt="TDD Group Ltd Logo">
         </div>
     </div>
 </body>
