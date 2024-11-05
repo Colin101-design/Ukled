@@ -40,15 +40,10 @@
             background: rgba(0, 51, 0, 0.6);
             z-index: 2;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 20px;
-        }
-        .overlay img {
-            max-width: 150px;
-            margin-bottom: 20px;
         }
         .overlay h1 {
             font-size: 3rem;
@@ -57,6 +52,16 @@
         .overlay p {
             font-size: 1.5rem;
             margin: 10px 0 0;
+        }
+        /* Logo Positioning */
+        .logo-container {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            z-index: 3;
+        }
+        .logo-container img {
+            width: 150px; /* Adjust size as needed */
         }
     </style>
 </head>
@@ -67,9 +72,14 @@
             <!-- Provide a fallback if video doesn't load -->
         </video>
         <div class="overlay">
-            <img src="static/logo.png" alt="UKLED Logo">
-            <h1>Our Website is Coming Soon</h1>
-            <p>We're working hard to bring you a new experience. Stay tuned!</p>
+            <div>
+                <h1>Our Website is Coming Soon</h1>
+                <p>We're working hard to bring you a new experience. Stay tuned!</p>
+            </div>
+        </div>
+        <!-- Logo in bottom-left corner -->
+        <div class="logo-container">
+            <img src="static/TDD_Group_Ltd_Logo.jpeg" alt="TDD Group Ltd Logo">
         </div>
     </div>
 </body>
